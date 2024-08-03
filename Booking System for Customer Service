@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class BookingSystem {
+    public static void main(String[] args) {
+        try {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("Welcome to the Booking System!");
+            System.out.print("Enter your name: ");
+            String userName = scanner.nextLine();
+
+            System.out.print("Enter the service you want to book: ");
+            String service = scanner.nextLine();
+
+            System.out.print("Enter the date of booking (DD/MM/YYYY): ");
+            String date = scanner.nextLine();
+
+            System.out.println("Booking confirmed for " + userName + " for " + service + " on " + date);
+
+            scanner.close();
+        } catch (Exception e) {
+            System.out.println("An error occurred. Please try again.");
+            e.printStackTrace();
+        }
+    }
+}
